@@ -24,7 +24,7 @@
         <li><%= link_to "Gallery", gallery_path, class: params[:action] == "gallery" ? "active" : "" %></li>
         <li><a href="#">Administrators</a></li>
         <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><%= link_to "Contact Us", contact_path, class: params[:action] == "contact" ? "active" : "" %></li>
       </ul>
     </nav>
 

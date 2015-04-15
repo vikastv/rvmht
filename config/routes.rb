@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'home#index'
   resources :home, only: [:index]
   get 'gallery' => 'home#gallery'
+  get 'contact' => 'home#contact'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
