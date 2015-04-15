@@ -1,0 +1,238 @@
+/*@charset "utf-8";*/
+/* CSS Document */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body{
+background-color: #5896A9;
+margin:0px;
+padding: 0px;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.container{
+width: 980px;
+margin:0px auto 0px auto;
+}
+
+header{
+background:#0578d5 url('/assets/header-bg.jpg') 410px 0px no-repeat;
+}
+
+.hd{
+height: 100px;
+width: 903px;
+}
+.title{
+font: bold 28px Verdana, Arial, Helvetica, sans-serif;
+color: #ffffff;
+margin-left: 10px;
+}
+
+.sb-title{
+font: bold 14px Verdana, Arial, Helvetica, sans-serif;
+color: #ffffff;
+margin-left: 10px;
+}
+
+.logo{
+background-image: url("/assets/vikas-logo-transparent-height-100.png");
+background-repeat:  no-repeat;
+height:100px;
+width: 77px;
+}
+
+nav{
+background: #2E7287;
+height: 38px;
+width: 980px;
+}
+
+nav ul{
+margin:0px 0px 0px 10px;
+padding:0px;
+}
+
+nav ul li{
+list-style:none;
+display:inline;
+float:left;
+}
+
+nav ul li a.active{
+background:#328FA5;
+border: solid 1px #57E5F7;
+border-radius: 3px;
+height:16px;
+line-height: 16px;
+margin-top:5px;
+margin-left:-1px;
+}
+
+nav ul li a.active:hover{
+color: #ffffff;
+margin-left:-1px;
+}
+
+nav ul li a{
+color:#FFFFFF;
+font: bold 11px Verdana, Arial, Helvetica, sans-serif;
+text-decoration:none;
+border-right: solid 1px #57E5F7;
+height:12px;
+line-height: 14px;
+text-align:center;
+padding: 5px 7px;
+float:left;
+margin-top:7px;
+}
+
+nav ul li a:hover{
+background:#328FA5;
+border: solid 1px #57E5F7;
+border-radius: 3px;
+height:16px;
+line-height: 16px;
+margin-top:5px;
+margin-left:-1px;
+}
+
+.pg-content{
+background:#D9F4FF;
+min-height: 100%;
+width: 980px;
+float: left;
+}
+
+.leftBox{
+margin-left:10px;
+border-right: solid 1px #2381AD;
+width: 200px;
+padding:0px 5px 5px 0px;
+}
+
+.leftBox ul{
+margin:0px;
+padding:0px;
+}
+
+.leftBox ul li{
+height:40px;
+line-height: 20px;
+font-weight: bold;
+list-style:none;
+color:#000000;
+padding: 5px;
+font-size:12px;
+border-bottom:solid 1px #015981;
+}
+
+.rightBox{
+margin-left:10px;
+width: 745px;
+}
+
+.rightBox p{
+font-size: 14px;
+}
+
+.leftBox h3, .rightBox h3{color: #2E7287;}
+
+.footer {
+    background-color: #2E7287;
+    position: relative;
+    bottom: 0;
+    height: 30px;
+    width: 980px;
+    overflow:hidden;
+  float: left;
+}
+
+.footer p{
+  text-align: center;
+  color: #ffffff;
+  font: bold 12px Verdana, Arial, Helvetica, sans-serif;
+  line-height: 30px;
+  margin:0px;
+}
+
+/*------------------Custom Helpers-----------------*/
+.float-l{float:left;}
+.float-r{float:right;}
+.clear{clear: both;}
+
+.rule-white-b{
+border-bottom: solid 1px #ffffff;
+padding-bottom:5px;
+}
+
+.rule-darkGreen-b{
+border-bottom: solid 2px #2e7287;
+padding-bottom:5px;
+}
+
+.text-center{text-align: center;}
+.text-right{text-align:right;}
+.text-left{text-align: left;}
+
+.font-sz-micro{font-size: 8px;}
+.font-sz-mini{font-size:11px;}
+.font-sz-default{font-size:12px;}
+.font-sz-medium{font-size:14px;}
+.font-sz-big{font-size:17px;}
+
+.text-bold{font-weight: bold;}
+
+.mar-none{margin:0px;}
+.mar-b-none{margin-bottom: 0px;}
+.mar-t-none{margin-top: 0px;}
+.mar-l-none{margin-left: 0px;}
+.mar-r-none{margin-right: 0px;}
+
+.mar-double{margin: 1em;}
+.mar-b-double{margin-bottom: 1em;}
+.mar-t-double{margin-top: 1em;}
+.mar-l-double{margin-left: 1em;}
+.mar-r-double{margin-right: 1em;}
+
+.mar-default{margin: 0.5em;}
+.mar-b-default{margin-bottom: 0.5em;}
+.mar-t-default{margin-top: 0.5em;}
+.mar-l-default{margin-left: 0.5em;}
+.mar-r-default{margin-right: 0.5em;}
+
+.mar-divide{margin: 0.2em;}
+.mar-b-divide{margin-bottom: 0.2em;}
+.mar-t-divide{margin-top: 0.2em;}
+.mar-l-divide{margin-left: 0.2em;}
+.mar-r-divide{margin-right: 0.2em;}
+
+.pad-none{padding:0px;}
+.pad-b-none{padding-bottom: 0px;}
+.pad-t-none{padding-top: 0px;}
+.pad-l-none{padding-left: 0px;}
+.pad-r-none{padding-right: 0px;}
+
+.pad-double{padding: 1em;}
+.pad-b-double{padding-bottom: 1em;}
+.pad-t-double{padding-top: 1em;}
+.pad-l-double{padding-left: 1em;}
+.pad-r-double{padding-right: 1em;}
+
+.pad-default{padding: 0.5em;}
+.pad-b-default{padding-bottom: 0.5em;}
+.pad-t-default{padding-top: 0.5em;}
+.pad-l-default{padding-left: 0.5em;}
+.pad-r-default{padding-right: 0.5em;}
+
+.pad-divide{padding: 0.2em;}
+.pad-b-divide{padding-bottom: 0.2em;}
+.pad-t-divide{padding-top: 0.2em;}
+.pad-l-divide{padding-left: 0.2em;}
+.pad-r-divide{padding-right: 0.2em;}
+
+.dis-block{display: block;}
+.dis-inline{display:inline;}
+.dis-InBlk{display:inline-block;}

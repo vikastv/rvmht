@@ -1,14 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Rvmht</title>
+  <title>RVMHT</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="container">
+    <header class="float-l">
+      <div class="hd float-l">
+        <p class="title mar-b-none">R Venkata Rao Maratha Hostel</p>
+        <p class="sb-title mar-b-none mar-t-divide">Tumkur</p>
+      </div>
+      <div class="logo float-r"></div>
+    </header>
 
-<%= yield %>
+    <div class="clear"></div>
 
+    <nav class="float-l dis-block">
+      <ul>
+        <li class="active"><%= link_to "Home", home_index_path, class: params[:action] == "index" ? "active" : "" %></li>
+        <li><%= link_to "Gallery", gallery_path, class: params[:action] == "gallery" ? "active" : "" %></li>
+        <li><a href="#">Administrators</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="clear"></div>
+
+    <div class="pg-content">
+      <div class="leftBox float-l mar-t-double">
+        <h3 class="font-sz-big mar-none rule-darkGreen-b pad-l-divide">Board Members</h3>
+        <ul>
+          <li>T.R.Venkata Rao Chavan  <font color="red">President</font></li>
+          <li>T.M.Ramachandra Rao Chavan <font color="red">Treasurer</font></li>
+          <li>Nagesh Gaikwad <br /> <font color="red">Secretary</font></li>
+        </ul>
+      </div>
+
+      <%= yield %>
+
+    </div>
+    <div class="footer"><p> www.RVRMH.com | &copy; 2014 </p></div>
+  </div>
 </body>
 </html>

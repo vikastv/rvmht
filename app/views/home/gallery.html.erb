@@ -1,0 +1,132 @@
+<div class="rightBox float-l mar-t-double">
+  <h3 class="font-sz-big mar-none rule-darkGreen-b pad-l-divide">Gallery</h3>
+  <div id="gallery" class="content">
+    <div id="controls" class="controls"></div>
+    <div class="slideshow-container">
+      <div id="loading" class="loader"></div>
+      <div id="slideshow" class="slideshow"></div>
+    </div>
+    <div id="caption" class="caption-container"></div>
+  </div>
+  <div id="thumbs" class="navigation">
+    <hr />
+    <ul class="thumbs noscript">
+      <li>
+        <a class="thumb" name="Hostel Name" href="assets/1-333-502.jpg" title="Hostel Name">
+          <img src="assets/1-80px.jpg" alt="Hostel Name" />
+        </a>
+        <div class="caption">
+          <div class="image-title">Hostel Name</div>
+          <div class="image-desc">While entering the Hostel</div>
+        </div>
+      </li>
+
+      <li>
+        <a class="thumb" name="Middle of the hostel" href="assets/2-502-333.jpg" title="Middle of the hostel">
+          <img src="assets/2-80px.jpg" alt="Middle of the hostel" />
+        </a>
+        <div class="caption">
+          <div class="image-title">Middle of the hostel</div>
+          <div class="image-desc">Refreshing open space for the students</div>
+        </div>
+      </li>
+
+      <li>
+        <a class="thumb" name="Hostel Corridor" href="assets/3-502-333.jpg" title="Hostel Corridor">
+          <img src="assets/3-80px.jpg" alt="Hostel Corridor" />
+        </a>
+        <div class="caption">
+          <div class="image-title">Hostel Corridor</div>
+          <div class="image-desc">The corridor where student enter to their rooms</div>
+        </div>
+      </li>
+
+      <li>
+        <a class="thumb" name="Hostel Kitchen" href="assets/4-502-333.jpg" title="Hostel Kitchen">
+          <img src="assets/4-80px.jpg" alt="Hostel Kitchen" />
+        </a>
+        <div class="caption">
+          <div class="image-title">Hostel Kitchen</div>
+          <div class="image-desc">Hostel kitchen where daily breakfast, lunch and dinner gets prepared</div>
+        </div>
+      </li>
+
+      <li>
+        <a class="thumb" name="Hostel Dinning Room" href="assets/5-502-333.jpg" title="Hostel Dinning Room">
+          <img src="assets/5-80px.jpg" alt="Hostel Dinning Room" />
+        </a>
+        <div class="caption">
+          <div class="image-title">Hostel Dinning Room</div>
+          <div class="image-desc">Dinning room where all the students have their breakfast, lunch and dinner</div>
+        </div>
+      </li>
+
+      <li>
+        <a class="thumb" href="assets/6-502-333.jpg" title="Title #5">
+          <img src="assets/6-80px.jpg" alt="Title #5" />
+        </a>
+        <div class="caption">
+
+          <div class="image-title">Hostel Play Area</div>
+          <div class="image-desc">Play area for hostel students</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script type="text/javascript">
+  jQuery(document).ready(function($) {
+    // We only want these styles applied when javascript is enabled
+    $('div.navigation').css({'width' : '745px', 'float' : 'left'});
+    $('div.content').css('display', 'block');
+
+    // Initially set opacity on thumbs and add
+    // additional styling for hover effect on thumbs
+    var onMouseOutOpacity = 0.67;
+    $('#thumbs ul.thumbs li').opacityrollover({
+      mouseOutOpacity:   onMouseOutOpacity,
+      mouseOverOpacity:  1.0,
+      fadeSpeed:         'fast',
+      exemptionSelector: '.selected'
+    });
+
+    // Initialize Advanced Galleriffic Gallery
+    var gallery = $('#thumbs').galleriffic({
+      delay:                     2500,
+      numThumbs:                 7,
+      preloadAhead:              10,
+      enableTopPager:            false,
+      enableBottomPager:         true,
+      maxPagesToShow:            7,
+      imageContainerSel:         '#slideshow',
+      controlsContainerSel:      '#controls',
+      captionContainerSel:       '#caption',
+      loadingContainerSel:       '#loading',
+      renderSSControls:          true,
+      renderNavControls:         true,
+      playLinkText:              'Play Slideshow',
+      pauseLinkText:             'Pause Slideshow',
+      prevLinkText:              '&lsaquo; Previous Photo',
+      nextLinkText:              'Next Photo &rsaquo;',
+      nextPageLinkText:          'Next &rsaquo;',
+      prevPageLinkText:          '&lsaquo; Prev',
+      enableHistory:             false,
+      autoStart:                 false,
+      syncTransitions:           true,
+      defaultTransitionDuration: 900,
+      onSlideChange:             function(prevIndex, nextIndex) {
+        // 'this' refers to the gallery, which is an extension of $('#thumbs')
+        this.find('ul.thumbs').children()
+          .eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()
+          .eq(nextIndex).fadeTo('fast', 1.0);
+      },
+      onPageTransitionOut:       function(callback) {
+        this.fadeTo('fast', 0.0, callback);
+      },
+      onPageTransitionIn:        function() {
+        this.fadeTo('fast', 1.0);
+      }
+    });
+  });
+</script>

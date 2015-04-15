@@ -13,4 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery-2.1.3
+//= require jquery.galleriffic
+//= require jquery.opacityrollover
 //= require_tree .
